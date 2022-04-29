@@ -1,16 +1,18 @@
-### Hi there 👋
-
-<!--
-**Enrique-Ceron/Enrique-Ceron** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- nombre : Actualizar ID de README 
+  : github -contentful-readme 
+  uses : Merlin04/github-contentful-readme@v[Insertar la última versión aquí, ver https://github.com/Merlin04/github-contentful-readme/releases] 
+  env :
+     GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} 
+  con :
+     headerKey : " github-header "
+     subheaderKey : " github-subheader "
+     footerKey : " github-footer "
+     setOfProjectsCollectionId : " proyectos-colección-id"
+     urlKey : " website-url "
+     projectsLimit : 4 
+    contentfulAccessToken : ${{ secrets.CONTENTFUL_ACCESS_TOKEN }} 
+    contentfulSpaceId : ${{ secrets.CONTENTFUL_SPACE_ID }}``` 
+- Es posible que desee programar esto para que se ejecute cada 10 minutos, péguelo debajo `en` :
+ ` ` ` programación yaml 
+: 
+  - cron: "*/10 * * * *"
